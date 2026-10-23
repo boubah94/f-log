@@ -55,21 +55,27 @@ nav button.active { color: #ff5d5d; }
 <main>
   <iframe id="fW" class="active" src="https://boubah94.github.io/w-log-dashboard/" title="w-log"></iframe>
   <iframe id="fR" src="https://boubah94.github.io/r-log-dashboard/" title="r-log" loading="lazy"></iframe>
+  <iframe id="fO" src="overall.html" title="overall" loading="lazy"></iframe>
 </main>
 <nav>
   <button id="tW" class="active" onclick="show('W')"><span class="ico">&#x1F4AA;</span>W-Log</button>
   <button id="tR" onclick="show('R')"><span class="ico">&#x1F3C3;</span>R-Log</button>
+  <button id="tO" onclick="show('O')"><span class="ico">&#x1FAC0;</span>Overall</button>
 </nav>
 <script>
 function show(which) {
-  const w = which === 'W';
-  document.getElementById('fW').classList.toggle('active', w);
-  document.getElementById('fR').classList.toggle('active', !w);
-  document.getElementById('tW').classList.toggle('active', w);
-  document.getElementById('tR').classList.toggle('active', !w);
+  const ids = { W: ['fW', 'tW'], R: ['fR', 'tR'], O: ['fO', 'tO'] };
+  for (const k in ids) {
+    const on = k === which;
+    document.getElementById(ids[k][0]).classList.toggle('active', on);
+    document.getElementById(ids[k][1]).classList.toggle('active', on);
+  }
   try { localStorage.setItem('flog-tab', which); } catch (e) {}
 }
-try { if (localStorage.getItem('flog-tab') === 'R') show('R'); } catch (e) {}
+try {
+  const saved = localStorage.getItem('flog-tab');
+  if (saved === 'R' || saved === 'O') show(saved);
+} catch (e) {}
 </script>
 </body>
 </html>
