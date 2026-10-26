@@ -28,14 +28,20 @@ h1 { font-size: 1.15rem; letter-spacing: 1.5px; text-transform: uppercase; }
 }
 .stat .v { font-size: 1.05rem; font-weight: 700; color: #f5b921; }
 .stat .l { color: #8f8f9a; font-size: .68rem; margin-top: 2px; }
-.lane {
+.lane, .lever {
   background: #0b0b0e; border: 1px solid #262633; border-radius: 12px;
   padding: 13px 14px; margin-bottom: 12px;
 }
-.lane h2 { font-size: .98rem; margin-bottom: 7px; }
-.lane p, .lane li { font-size: .88rem; line-height: 1.5; color: #d8d5cc; }
-.lane ul { padding-left: 17px; }
-.lane li { margin-bottom: 4px; }
+.lane h2, .lever h2 { font-size: .98rem; margin-bottom: 7px; }
+.lane p, .lane li, .lever p, .lever li { font-size: .88rem; line-height: 1.5; color: #d8d5cc; }
+.lane ul, .lever ul { padding-left: 17px; }
+.lane li, .lever li { margin-bottom: 4px; }
+.meaning {
+  margin-top: 8px; padding-top: 8px; border-top: 1px dashed #262633;
+  font-size: .84rem !important; color: #b9b4a6 !important;
+}
+.meaning b { color: #f5b921; }
+.sect { font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin: 20px 0 10px; }
 .tag {
   display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .8px;
   padding: 2px 7px; border-radius: 20px; margin-left: 6px; vertical-align: 2px;
@@ -52,7 +58,7 @@ a { color: #f5b921; }
 <body>
 
 <h1>🫀 Overall fitness</h1>
-<p class="sub">Week of Oct 19–25, 2026 · Sunday report, Oct 25 · all four lanes</p>
+<p class="sub">Week of Oct 19–25, 2026 · Sunday report, Oct 25 · all four lanes, with what the numbers actually mean</p>
 
 <div class="focus">
   <div class="k">💡 ONE FOCUS</div>
@@ -68,32 +74,65 @@ a { color: #f5b921; }
   <div class="stat"><div class="v">0</div><div class="l">runs</div></div>
 </div>
 
+<h2 class="sect">🩺 What this means for your health</h2>
+
+<div class="lane">
+  <h2>❤️ Heart — resting HR ~68, HRV ~46 ms</h2>
+  <p>Resting heart rate averaged 67.8 this week (61–74 day to day). Normal is 60–100; trained athletes sit at 40–60. HRV averaged ~46 ms — a healthy range, and the number personal trainers actually watch: it rises when you're recovered and drops when you're run down.</p>
+  <p class="meaning"><b>So what:</b> your heart is healthy-average, not yet athletic — and the lever that moves both numbers is an aerobic base. That's the missing Friday runs, not more lifting. Better sleep pushes HRV up within days.</p>
+</div>
+
+<div class="lane">
+  <h2>👟 Movement — 13.5k weekday steps, 37.6 km this week</h2>
+  <p>A 2022 <i>Lancet Public Health</i> meta-analysis (~47,000 adults) found mortality risk keeps dropping as daily steps rise, leveling off around 8–10k for under-60s. Your workdays clear that bar by half again — the Corning floor is quietly doing cardio's job.</p>
+  <p class="meaning"><b>So what:</b> the weekday win is already banked. The hole is the off-day: Saturday was 1,864 steps. A ~6k floor on rest days keeps blood flow (and recovery) up without costing you the couch.</p>
+</div>
+
+<div class="lane">
+  <h2>😴 Sleep — 5h30m weeknights is the red flag</h2>
+  <p>Only 3 nights tracked, but both weeknights landed under 6 hours. The research here is blunt: one week of 5-hour nights cut testosterone 10–15% in young men (<i>JAMA</i>, 2011), and roughly 70% of daily growth hormone is released during deep sleep — which yours is actually good at (1h20m–1h47m when tracked).</p>
+  <p class="meaning"><b>So what:</b> for a muscle-gain goal, sleep is a bigger lever than any program change. You're not failing at deep sleep — you're failing at <i>time in bed</i>. Thirty more minutes on worknights beats any supplement.</p>
+</div>
+
+<div class="lane">
+  <h2>🫁 Recovery signals — all quiet, all normal</h2>
+  <p>Respiratory rate ~15 breaths/min (normal 12–20), blood oxygen 94–97% on sampled days (normal 95–100), standing ~3.4 hrs/day, 32 flights of stairs this week. Nothing here needs fixing.</p>
+  <p class="meaning"><b>So what:</b> these are your early-warning gauges. A respiratory rate or resting HR that jumps for 2–3 days straight usually means illness or overreaching before you feel it — worth knowing they're being watched.</p>
+</div>
+
+<h2 class="sect">🎯 The lanes</h2>
+
 <div class="lane">
   <h2>✅ Habits <span class="tag warn">THIN LOG</span></h2>
-  <p>The checkmark lane is still dark — the last logged row is Oct 19, all unchecked. The work itself is visibly happening (Watch + Strong both prove it), so this is a logging gap, not a doing gap. Two taps a day closes it.</p>
+  <p>The checkmark lane is still dark — last logged row is Oct 19, all unchecked. The work is visibly happening (Watch + Strong prove it); the boxes just aren't getting ticked.</p>
+  <p class="meaning"><b>So what:</b> this page is only as honest as the log. Two taps a day keeps every lane above grounded instead of guessed.</p>
 </div>
 
 <div class="lane">
   <h2>🏋️ Lifting <span class="tag good">PLATEAU BROKEN</span></h2>
   <ul>
-    <li><b>The 8-week wall fell:</b> barbell curl 45×10 → <b>55×10</b> and barbell row 45×10 → <b>55×12</b> (Oct 22) — first time past 45 on either since Aug 25. Pulldown best yet at 110×12.</li>
-    <li>Legs: squat up to <b>165×10 (est. ~220)</b> — heavier at lower reps, a better signal than last week's estimate. Seated calf 90×17, leg curl 60×12.</li>
-    <li>Bench held 135×10 and added the week's first real strength-range work — three 5-rep sets at 135.</li>
-    <li><b>Missing:</b> shoulders+abs (nothing since Oct 15) and OHP is still parked at 45 — unmoved since August. No hinge since Aug 31. Legs are 2 sessions in 4 weeks vs 3 each for chest and back.</li>
+    <li><b>The 8-week wall fell:</b> curl 45×10 → <b>55×10</b>, row 45×10 → <b>55×12</b> (Oct 22). Pulldown best yet, 110×12.</li>
+    <li>Squat up to <b>165×10 (est. ~220)</b>; bench held 135×10 and added the week's first 5-rep strength sets at 135.</li>
+    <li><b>Missing:</b> shoulders+abs (nothing since Oct 15), OHP parked at 45 since August, no hinge since Aug 31, legs 2 sessions in 4 weeks vs 3 each for chest and back.</li>
   </ul>
+  <p class="meaning"><b>So what:</b> strength is climbing where you train — the gaps are frequency, not effort. Meta-analyses (Schoenfeld, 2016) find a muscle trained 2×/week grows better than 1× at equal volume. Legs and shoulders at 1×-or-less is exactly that gap.</p>
 </div>
 
 <div class="lane">
   <h2>🏃 Running <span class="tag gap">NOT STARTED</span></h2>
-  <p>Second straight week with zero runs — Friday Oct 23 didn't happen. The 2024 baseline still waits (52.4 mi, 8:45 avg pace, longest 8.1 mi). The focus stays the same: log the first run, even 2 easy miles on Friday.</p>
+  <p>Second straight week with zero runs — Friday Oct 23 didn't happen. The 2024 baseline still waits (52.4 mi, 8:45 avg pace, longest 8.1 mi).</p>
+  <p class="meaning"><b>So what:</b> this is the same lever as the heart card above — an easy aerobic base lowers resting HR, lifts HRV, and improves recovery between lifting days. It starts with one short, easy Friday run, not a comeback performance.</p>
 </div>
 
-<div class="lane">
-  <h2>⌚ Watch health <span class="tag warn">SLEEP IS THE LEVER</span></h2>
+<h2 class="sect">🔧 Improve next — ranked by payoff</h2>
+
+<div class="lever">
   <ul>
-    <li><b>Weekdays move:</b> 12.5k–14.6k steps (avg ~13.5k) — the Corning shifts do the work. But Saturday Oct 24 was just <b>1,864 steps</b>, the first truly sedentary off-day in weeks.</li>
-    <li>Recovery baseline forming (~12 days): resting HR 64–74, HRV 40–51 ms. Direction fine, no trend call yet.</li>
-    <li><b>Sleep is still the ceiling:</b> only 3 nights tracked, weeknights averaged <b>5h30m</b> — both under 6h. Deep sleep strong when tracked (1h20m–1h47m). The weekend catch-up doesn't fix the weeknights.</li>
+    <li><b>1 · Sleep +30 min on worknights.</b> How: hard lights-out target, phone down at the same time nightly. Why: testosterone, growth hormone, and next-day HRV all ride on it — highest payoff per minute of anything on this page.</li>
+    <li><b>2 · One easy Friday run.</b> How: 2 miles, conversational pace, no time goal. Why: builds the aerobic base that pulls resting HR down and recovery up — and un-zeros the running lane.</li>
+    <li><b>3 · Restore shoulders+abs, add a hinge.</b> How: one session back in the rotation; deadlift pattern light to start. Why: closes the 2×/week frequency gap and the 8-week hinge hole before they become imbalances.</li>
+    <li><b>4 · Rest-day step floor ~6k.</b> How: one walk on off-days. Why: kills the 1,864-step Saturday pattern; easy movement speeds recovery more than full stillness.</li>
+    <li><b>5 · Tick the habit boxes daily.</b> How: two taps, same moment each day (post-workout works). Why: keeps this report honest — the data above is only as good as the log.</li>
   </ul>
 </div>
 
